@@ -17,6 +17,8 @@ import { LineChartComponent } from './charts/line-chart/line-chart.component';
 import { PieChartComponent } from './charts/pie-chart/pie-chart.component';
 import { ServerComponent } from './server/server.component';
 import { PaginationComponent } from './pagination/pagination.component';
+
+// Services
 import { SalesDataService } from './services/sales-data.service';
 import { ServerService } from './services/server.service';
 
