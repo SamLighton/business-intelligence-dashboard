@@ -1,9 +1,9 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { ServerService } from '../../services/server.service';
-import { Server } from '../../shared/server';
-import { ServerMessage } from '../../shared/server-message';
-import { Observable } from 'rxjs/Rx';
-import { AnonymousSubscription } from 'rxjs/Subscription';
+import { Component, OnInit, OnDestroy } from "@angular/core";
+import { ServerService } from "../../services/server.service";
+import { Server } from "../../shared/server";
+import { ServerMessage } from "../../shared/server-message";
+import { Observable } from "rxjs/Rx";
+import { AnonymousSubscription } from "rxjs/Subscription";
 
 /*
 const SAMPLE_SERVERS = [
@@ -15,9 +15,9 @@ const SAMPLE_SERVERS = [
 */
 
 @Component({
-  selector: 'app-section-health',
-  templateUrl: './section-health.component.html',
-  styleUrls: ['./section-health.component.css']
+  selector: "app-section-health",
+  templateUrl: "./section-health.component.html",
+  styleUrls: ["./section-health.component.css"]
 })
 export class SectionHealthComponent implements OnInit, OnDestroy {
   constructor(private _serverService: ServerService) {}
@@ -50,11 +50,9 @@ export class SectionHealthComponent implements OnInit, OnDestroy {
   }
 
   sendMessage(msg: ServerMessage) {
-    this._serverService
-      .handleServerMessage(msg)
-      .subscribe(
-        res => console.log('Message sent to server:', msg),
-        err => console.log('Error:', err)
-      );
+    this._serverService.handleServerMessage(msg).subscribe(
+      res => console.log("Message sent to server:", msg),
+      err => console.log("Error:", err)
+    );
   }
 }
