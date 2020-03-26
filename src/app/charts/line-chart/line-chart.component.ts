@@ -6,12 +6,12 @@ import * as moment from "moment";
 /* Sample Data
 
 const LINE_CHART_SAMPLE_DATA: any[] = [
-  { data: [32, 14, 46, 23, 38, 56], label: 'Sentiment Analysis' },
-  { data: [12, 18, 26, 13, 28, 26], label: 'Image Recognition' },
-  { data: [52, 34, 49, 53, 68, 62], label: 'Forecasting' }
+  { data: [32, 14, 46, 23, 38, 56], label: "Sentiment Analysis" },
+  { data: [12, 18, 26, 13, 28, 26], label: "Image Recognition" },
+  { data: [52, 34, 49, 53, 68, 62], label: "Forecasting" }
 ];
 
-const LINE_CHART_LABELS: string[] = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'];
+const LINE_CHART_LABELS: string[] = ["Jan", "Feb", "Mar", "Apr", "May", "Jun"];
 
 */
 
@@ -60,7 +60,7 @@ export class LineChartComponent implements OnInit {
 
         dates = [].concat.apply([], dates);
 
-        // console.log('dates:', dates);
+        // console.log("dates:", dates);
 
         const r = this.getCustomerOrdersByDate(allChartData, dates)["data"];
 
@@ -94,13 +94,12 @@ export class LineChartComponent implements OnInit {
       r.push([e.placed, e.total]);
       return r;
     }, []);
-
     // console.log('formattedOrders:', formattedOrders);
 
     const result = { customer: name, data: formattedOrders };
 
-    // console.log('result:', result);
     return result;
+    //console.log("result:", result);
   }
 
   getCustomerOrdersByDate(orders: any, dates: any) {
@@ -109,7 +108,7 @@ export class LineChartComponent implements OnInit {
 
     const customers = this.topCustomers;
     const prettyDates = dates.map(x => this.toFriendlyDate(x));
-    const u = Array.from(new Set(prettyDates)).sort(); // Unique Dates
+    const u = Array.from(new Set(prettyDates)).sort(); // Unique dates from an array, sorted chronologically
     // console.log(u);
 
     // define our result object to return:
