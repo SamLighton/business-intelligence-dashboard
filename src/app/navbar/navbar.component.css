@@ -5,12 +5,13 @@
 }
 
 .logo-left {
-  background-color: #ff6b6b;
+  background-color: #a82c2c;
   padding: 3px 5px 3px 8px;
   border-radius: 4px;
 }
 
 .logo-right {
+  background-color: #a82c2c;
   padding: 3px 8px 3px 3px;
   margin-left: -5px;
   border-radius: 4px;
