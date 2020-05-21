@@ -14,7 +14,7 @@ dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL --version 2.2.0
 dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Tools --version 2.0.0
 ```
 
-Use the Angular CLI or edit the package.json file and use 'npm install' to install Angular version 8.2.14
+Use the Angular CLI or edit the package.json file and use `npm install` to install Angular version 8.2.14
 
 Install the latest version of postgreSQL from https://www.postgresql.org/ for the database back end
 
